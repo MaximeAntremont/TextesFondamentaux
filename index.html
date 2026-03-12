@@ -134,7 +134,9 @@
   .author-card .model-tag {
     display: inline-block; background: var(--tag-bg); font-size: .78rem;
     padding: .15rem .55rem; border-radius: 999px; color: var(--text-light); margin-bottom: .5rem;
+    cursor: pointer; transition: background .15s;
   }
+  .author-card .model-tag:hover { background: var(--accent-light); color: var(--accent-dark); }
   .author-card .preview { font-size: .85rem; color: var(--text-light); }
 
   /* ── Author detail (modal) ── */
@@ -250,11 +252,14 @@
   .ouvrage-card .ouvrage-concept-tag {
     display: inline-block; background: var(--bg); font-size: .78rem;
     padding: .15rem .55rem; border-radius: 999px; color: var(--accent-dark); font-weight: 500;
+    cursor: pointer; transition: background .15s;
   }
+  .ouvrage-card .ouvrage-concept-tag:hover { background: var(--accent-light); }
   .ouvrage-card .ouvrage-meta { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .5rem; }
   .ouvrage-card .ouvrage-model-tag {
     display: inline-block; background: var(--accent-light); font-size: .73rem;
     padding: .12rem .5rem; border-radius: 999px; color: var(--accent-dark);
+    cursor: pointer; transition: background .15s;
   }
 
   /* ── Timeline view ── */
@@ -290,7 +295,8 @@
   .tl-card .tl-tags .tl-tag {
     font-size: .73rem; padding: .12rem .5rem; border-radius: 999px;
   }
-  .tl-tag.tl-model-tag { background: var(--accent-light); color: var(--accent-dark); }
+  .tl-tag.tl-model-tag { background: var(--accent-light); color: var(--accent-dark); cursor: pointer; transition: background .15s; }
+  .tl-tag.tl-model-tag:hover { background: var(--accent); color: #fff; }
   .tl-tag.tl-author-tag {
     background: var(--accent2-light); color: var(--accent2-dark);
     cursor: pointer; transition: all .18s;
@@ -308,12 +314,92 @@
   .tl-legend-dot.work-legend { border-color: var(--accent2); background: var(--accent2-light); }
 
   /* ── Responsive ── */
-  @media (max-width: 600px) {
-    header h1 { font-size: 1.25rem; }
-    .detail-panel { padding: 1.4rem; }
-    .authors-grid { grid-template-columns: 1fr; }
-    nav button { font-size: .8rem; padding: .45rem .9rem; }
-    .timeline { padding-left: 2rem; }
+  @media (max-width: 768px) {
+    /* Header */
+    header { padding: 1.5rem 1rem 1.2rem; }
+    header h1 { font-size: 1.2rem; }
+    header p { font-size: .82rem; }
+
+    /* Nav: horizontal scroll instead of wrapping */
+    nav {
+      justify-content: flex-start;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding: .7rem .8rem 0;
+      gap: .35rem;
+    }
+    nav::-webkit-scrollbar { display: none; }
+    nav button {
+      font-size: .8rem;
+      padding: .4rem .85rem;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Main spacing */
+    main { padding: 1rem .7rem 3rem; }
+
+    /* Cards: tighter padding */
+    .model-card { padding: 1rem 1.1rem; }
+    .model-card h2 { font-size: 1.05rem; }
+    .model-card .desc { font-size: .88rem; }
+
+    /* Authors grid single column */
+    .authors-grid { grid-template-columns: 1fr; gap: .7rem; }
+    .author-card { padding: 1rem 1.1rem; }
+
+    /* Detail panel full-screen on mobile */
+    .detail-overlay { padding: .5rem; align-items: flex-end; }
+    .detail-panel {
+      padding: 1.3rem 1.2rem;
+      max-height: 92vh;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    .detail-panel h2 { font-size: 1.15rem; padding-right: 2rem; }
+
+    /* Concept cards */
+    .concept-card { padding: 1rem 1.1rem; }
+    .concept-card h3 { font-size: .97rem; }
+
+    /* Concept filters: scroll horizontally */
+    .filter-row {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: .3rem;
+    }
+    .filter-row::-webkit-scrollbar { display: none; }
+    .filter-btn { white-space: nowrap; flex-shrink: 0; }
+
+    /* Ouvrages */
+    .ouvrage-card { padding: 1rem 1rem; }
+    .ouvrage-card h3 { font-size: .95rem; }
+    .ouvrage-card .ouvrage-header { flex-direction: column; gap: .15rem; }
+    .ouvrage-card .ouvrage-ref { font-size: .76rem; }
+
+    /* Timeline */
+    .timeline { padding-left: 1.8rem; }
+    .timeline::before { left: .7rem; }
+    .tl-dot { left: -1.45rem; width: 12px; height: 12px; }
+    .tl-card { padding: .8rem 1rem; }
+    .tl-card h3 { font-size: .93rem; }
+    .tl-item { margin-bottom: 1.3rem; }
+
+    /* Search bars full width */
+    .search-bar input { font-size: .88rem; padding: .55rem .85rem; }
+
+    /* Tags slightly smaller */
+    .tag { font-size: .75rem; padding: .17rem .55rem; }
+  }
+
+  /* Extra small screens */
+  @media (max-width: 380px) {
+    header h1 { font-size: 1.05rem; }
+    main { padding: .7rem .5rem 2.5rem; }
+    nav button { font-size: .73rem; padding: .35rem .7rem; }
+    .detail-panel { padding: 1rem; }
   }
 </style>
 </head>
@@ -589,6 +675,126 @@ const timelineEvents = [
 ];
 
 // ═══════════════════════════════════════════
+//  UTILITY: diacritics-insensitive search
+// ═══════════════════════════════════════════
+function norm(str) {
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
+// ═══════════════════════════════════════════
+//  GENERIC DETAIL PANELS (author, model, concept, ouvrage)
+// ═══════════════════════════════════════════
+function openPanel(html) {
+  const panel = document.getElementById("detailPanel");
+  panel.innerHTML = html;
+  const overlay = document.getElementById("detailOverlay");
+  overlay.classList.add("open");
+  panel.querySelector(".close-btn").addEventListener("click", closeDetail);
+  overlay.onclick = e => { if (e.target === overlay) closeDetail(); };
+  // wire inner clickable tags
+  panel.querySelectorAll("[data-action]").forEach(el => {
+    el.addEventListener("click", () => {
+      const action = el.dataset.action;
+      const id = el.dataset.id;
+      if (action === "author") { const a = authors.find(x => x.id === id); if (a) openAuthorDetail(a); }
+      else if (action === "model") openModelDetail(id);
+      else if (action === "concept") openConceptDetail(id, el.dataset.authorId);
+      else if (action === "ouvrage") openOuvrageDetail(parseInt(id));
+    });
+  });
+}
+
+function openAuthorDetail(author) {
+  const authorOuvrages = ouvrages.filter(o => o.authorId === author.id);
+  openPanel(`
+    <button class="close-btn">&times;</button>
+    <h2>${author.name}</h2>
+    ${author.dates ? `<div class="dates">${author.dates}</div>` : ""}
+    <div class="section-label">Modèle(s) communicationnel(s)</div>
+    <div>${author.models.map(m => `<span class="model-badge" style="cursor:pointer" data-action="model" data-id="${m}">${modelNames[m]}</span>`).join(" ")}</div>
+    <div class="section-label">Concepts marquants</div>
+    ${author.concepts.map(c => `
+      <div class="concept-item" style="cursor:pointer" data-action="concept" data-id="${c.name}" data-author-id="${author.id}">
+        <div class="name">${c.name}</div>
+        <div class="def">${c.def}</div>
+      </div>
+    `).join("")}
+    ${authorOuvrages.length ? `
+      <div class="section-label">Ouvrages cités</div>
+      ${authorOuvrages.map((o, i) => `<div class="concept-item" style="cursor:pointer" data-action="ouvrage" data-id="${ouvrages.indexOf(o)}"><div class="name" style="font-style:italic">${o.title}</div><div class="def">${o.year} — ${o.ref}</div></div>`).join("")}
+    ` : ""}
+  `);
+}
+
+function openModelDetail(modelId) {
+  const m = models.find(x => x.id === modelId);
+  if (!m) return;
+  const modelAuthors = authors.filter(a => a.models.includes(modelId));
+  const modelOuvrages = ouvrages.filter(o => o.model === modelId);
+  openPanel(`
+    <button class="close-btn">&times;</button>
+    <h2>${m.name}</h2>
+    <div class="dates">${m.period}</div>
+    <div class="section-label">Description</div>
+    <div style="font-size:.92rem;margin-bottom:.5rem;">${m.desc}</div>
+    <div class="section-label">Concepts clés</div>
+    <div style="font-size:.9rem;color:var(--text-light);margin-bottom:.5rem;">${m.concepts}</div>
+    <div class="section-label">Auteurs</div>
+    <div class="tags">${modelAuthors.map(a => `<span class="tag" data-action="author" data-id="${a.id}">${a.name}</span>`).join("")}</div>
+    ${modelOuvrages.length ? `
+      <div class="section-label">Ouvrages associés</div>
+      ${modelOuvrages.map(o => `<div class="concept-item" style="cursor:pointer" data-action="ouvrage" data-id="${ouvrages.indexOf(o)}"><div class="name" style="font-style:italic">${o.title}</div><div class="def">${o.year} — ${o.author}</div></div>`).join("")}
+    ` : ""}
+  `);
+}
+
+function openConceptDetail(conceptName, authorId) {
+  const author = authors.find(a => a.id === authorId);
+  const concept = author ? author.concepts.find(c => c.name === conceptName) : null;
+  if (!concept || !author) return;
+  const relatedOuvrages = ouvrages.filter(o => o.authorId === authorId && o.concepts.includes(conceptName));
+  openPanel(`
+    <button class="close-btn">&times;</button>
+    <h2>${concept.name}</h2>
+    <div class="section-label">Définition</div>
+    <div style="font-size:.92rem;margin-bottom:.5rem;">${concept.def}</div>
+    <div class="section-label">Auteur</div>
+    <div><span class="tag" data-action="author" data-id="${author.id}">${author.name}</span></div>
+    <div class="section-label">Modèle(s)</div>
+    <div>${author.models.map(m => `<span class="model-badge" style="cursor:pointer" data-action="model" data-id="${m}">${modelNames[m]}</span>`).join(" ")}</div>
+    ${relatedOuvrages.length ? `
+      <div class="section-label">Ouvrage(s) source</div>
+      ${relatedOuvrages.map(o => `<div class="concept-item" style="cursor:pointer" data-action="ouvrage" data-id="${ouvrages.indexOf(o)}"><div class="name" style="font-style:italic">${o.title}</div><div class="def">${o.year} — ${o.author}</div></div>`).join("")}
+    ` : ""}
+  `);
+}
+
+function openOuvrageDetail(index) {
+  const o = ouvrages[index];
+  if (!o) return;
+  const author = authors.find(a => a.id === o.authorId);
+  openPanel(`
+    <button class="close-btn">&times;</button>
+    <h2 style="font-style:italic">${o.title}</h2>
+    ${o.titleFr ? `<div class="dates">${o.titleFr}</div>` : ""}
+    <div class="dates">${o.year}</div>
+    <div class="section-label">Auteur</div>
+    <div><span class="tag" data-action="author" data-id="${o.authorId}">${o.author}</span></div>
+    <div class="section-label">Référence</div>
+    <div style="font-size:.85rem;color:var(--text-light);margin-bottom:.5rem;">${o.ref}</div>
+    <div class="section-label">Description</div>
+    <div style="font-size:.92rem;margin-bottom:.5rem;">${o.desc}</div>
+    <div class="section-label">Modèle</div>
+    <div><span class="model-badge" style="cursor:pointer" data-action="model" data-id="${o.model}">${modelNames[o.model]}</span></div>
+    <div class="section-label">Concepts associés</div>
+    ${o.concepts.map(c => {
+      const cObj = author ? author.concepts.find(x => x.name === c) : null;
+      return `<div class="concept-item"${cObj ? ` style="cursor:pointer" data-action="concept" data-id="${c}" data-author-id="${o.authorId}"` : ""}><div class="name">${c}</div>${cObj ? `<div class="def">${cObj.def}</div>` : ""}</div>`;
+    }).join("")}
+  `);
+}
+
+// ═══════════════════════════════════════════
 //  RENDER MODELS
 // ═══════════════════════════════════════════
 function renderModels() {
@@ -617,47 +823,34 @@ function renderModels() {
 // ═══════════════════════════════════════════
 function renderAuthors(filter = "") {
   const grid = document.getElementById("authorsGrid");
-  const filtered = authors.filter(a => a.name.toLowerCase().includes(filter.toLowerCase()));
+  const nf = norm(filter);
+  const filtered = authors.filter(a => !nf || norm(a.name).includes(nf));
   grid.innerHTML = filtered.map(a => `
     <div class="author-card" data-id="${a.id}">
       <h3>${a.name}</h3>
       ${a.dates ? `<div class="dates">${a.dates}</div>` : ""}
-      <div>${a.models.map(m => `<span class="model-tag">${modelNames[m]}</span>`).join(" ")}</div>
+      <div>${a.models.map(m => `<span class="model-tag" data-action="model" data-id="${m}" style="cursor:pointer">${modelNames[m]}</span>`).join(" ")}</div>
       <div class="preview">${a.concepts.length} concept${a.concepts.length > 1 ? "s" : ""} — ${a.concepts[0].name}${a.concepts.length > 1 ? ", …" : ""}</div>
     </div>
   `).join("");
   grid.querySelectorAll(".author-card").forEach(card => {
     card.addEventListener("click", () => {
       const author = authors.find(a => a.id === card.dataset.id);
-      if (author) openDetail(author);
+      if (author) openAuthorDetail(author);
+    });
+  });
+  grid.querySelectorAll("[data-action='model']").forEach(tag => {
+    tag.addEventListener("click", e => {
+      e.stopPropagation();
+      openModelDetail(tag.dataset.id);
     });
   });
 }
 
 // ═══════════════════════════════════════════
-//  DETAIL OVERLAY
+//  DETAIL OVERLAY (legacy wrapper)
 // ═══════════════════════════════════════════
-function openDetail(author) {
-  const panel = document.getElementById("detailPanel");
-  panel.innerHTML = `
-    <button class="close-btn" id="closeDetail">&times;</button>
-    <h2>${author.name}</h2>
-    ${author.dates ? `<div class="dates">${author.dates}</div>` : ""}
-    <div class="section-label">Modèle(s) communicationnel(s)</div>
-    <div>${author.models.map(m => `<span class="model-badge">${modelNames[m]}</span>`).join(" ")}</div>
-    <div class="section-label">Concepts marquants</div>
-    ${author.concepts.map(c => `
-      <div class="concept-item">
-        <div class="name">${c.name}</div>
-        <div class="def">${c.def}</div>
-      </div>
-    `).join("")}
-  `;
-  const overlay = document.getElementById("detailOverlay");
-  overlay.classList.add("open");
-  document.getElementById("closeDetail").addEventListener("click", closeDetail);
-  overlay.addEventListener("click", e => { if (e.target === overlay) closeDetail(); });
-}
+function openDetail(author) { openAuthorDetail(author); }
 function closeDetail() { document.getElementById("detailOverlay").classList.remove("open"); }
 
 // ═══════════════════════════════════════════
@@ -721,9 +914,9 @@ function renderConceptFilters() {
 
 function renderConcepts(filter = "") {
   const container = document.getElementById("conceptsList");
-  const lc = filter.toLowerCase();
+  const nf = norm(filter);
   const filtered = allConcepts.filter(c => {
-    const matchesText = !lc || c.name.toLowerCase().includes(lc) || c.def.toLowerCase().includes(lc);
+    const matchesText = !nf || norm(c.name).includes(nf) || norm(c.def).includes(nf);
     const matchesModel = !activeModelFilter || c.models.includes(activeModelFilter);
     const matchesAuthor = !activeAuthorFilter || c.authorId === activeAuthorFilter;
     return matchesText && matchesModel && matchesAuthor;
@@ -736,11 +929,11 @@ function renderConcepts(filter = "") {
 
   container.innerHTML = filtered.map(c => `
     <div class="concept-card">
-      <h3>${c.name}</h3>
+      <h3 class="clickable-concept" data-concept="${c.name}" data-author-id="${c.authorId}" style="cursor:pointer">${c.name}</h3>
       <div class="concept-def">${c.def}</div>
       <div class="concept-meta">
         <span class="author-link" data-author-id="${c.authorId}">${c.authorName}</span>
-        ${c.models.map(m => `<span class="model-label-tag">${modelNames[m]}</span>`).join("")}
+        ${c.models.map(m => `<span class="model-label-tag clickable-model" data-model="${m}" style="cursor:pointer">${modelNames[m]}</span>`).join("")}
       </div>
     </div>
   `).join("");
@@ -750,6 +943,12 @@ function renderConcepts(filter = "") {
       const author = authors.find(a => a.id === link.dataset.authorId);
       if (author) openDetail(author);
     });
+  });
+  container.querySelectorAll(".clickable-model").forEach(el => {
+    el.addEventListener("click", () => openModelDetail(el.dataset.model));
+  });
+  container.querySelectorAll(".clickable-concept").forEach(el => {
+    el.addEventListener("click", () => openConceptDetail(el.dataset.concept, el.dataset.authorId));
   });
 }
 
@@ -959,12 +1158,12 @@ const ouvrages = [
 
 function renderOuvrages(filter = "") {
   const container = document.getElementById("ouvragesList");
-  const lc = filter.toLowerCase();
+  const nf = norm(filter);
   const filtered = ouvrages.filter(o => {
-    if (!lc) return true;
-    return o.title.toLowerCase().includes(lc) || (o.titleFr && o.titleFr.toLowerCase().includes(lc))
-      || o.author.toLowerCase().includes(lc) || o.desc.toLowerCase().includes(lc)
-      || o.concepts.some(c => c.toLowerCase().includes(lc));
+    if (!nf) return true;
+    return norm(o.title).includes(nf) || (o.titleFr && norm(o.titleFr).includes(nf))
+      || norm(o.author).includes(nf) || norm(o.desc).includes(nf)
+      || o.concepts.some(c => norm(c).includes(nf));
   });
 
   if (filtered.length === 0) {
@@ -985,10 +1184,10 @@ function renderOuvrages(filter = "") {
       <div class="ouvrage-desc">${o.desc}</div>
       <div class="ouvrage-concepts-label">Concepts associés</div>
       <div class="ouvrage-concepts-list">
-        ${o.concepts.map(c => `<span class="ouvrage-concept-tag">${c}</span>`).join("")}
+        ${o.concepts.map(c => `<span class="ouvrage-concept-tag" data-action="concept" data-id="${c}" data-author-id="${o.authorId}" style="cursor:pointer">${c}</span>`).join("")}
       </div>
       <div class="ouvrage-meta">
-        <span class="ouvrage-model-tag">${modelNames[o.model]}</span>
+        <span class="ouvrage-model-tag" data-action="model" data-id="${o.model}" style="cursor:pointer">${modelNames[o.model]}</span>
       </div>
     </div>
   `).join("");
@@ -996,7 +1195,16 @@ function renderOuvrages(filter = "") {
   container.querySelectorAll(".ouvrage-author").forEach(el => {
     el.addEventListener("click", () => {
       const author = authors.find(a => a.id === el.dataset.authorId);
-      if (author) openDetail(author);
+      if (author) openAuthorDetail(author);
+    });
+  });
+  container.querySelectorAll("[data-action]").forEach(el => {
+    el.addEventListener("click", e => {
+      e.stopPropagation();
+      const action = el.dataset.action;
+      const id = el.dataset.id;
+      if (action === "model") openModelDetail(id);
+      else if (action === "concept") openConceptDetail(id, el.dataset.authorId);
     });
   });
 }
@@ -1006,7 +1214,7 @@ function renderOuvrages(filter = "") {
 // ═══════════════════════════════════════════
 function renderTimeline() {
   const container = document.getElementById("timelineContainer");
-  const sorted = [...timelineEvents].sort((a, b) => a.year - b.year);
+  const sorted = [...timelineEvents].sort((a, b) => b.year - a.year);
 
   container.innerHTML = sorted.map(ev => `
     <div class="tl-item">
@@ -1017,7 +1225,7 @@ function renderTimeline() {
         <div class="tl-author">${ev.author}</div>
         <div class="tl-desc">${ev.desc}</div>
         <div class="tl-tags">
-          <span class="tl-tag tl-model-tag">${modelNames[ev.model]}</span>
+          <span class="tl-tag tl-model-tag" data-action="model" data-id="${ev.model}" style="cursor:pointer">${modelNames[ev.model]}</span>
           <span class="tl-tag tl-author-tag" data-author-id="${ev.authorId}">${ev.authorId === "shannon" && ev.author.includes("Weaver") ? "Claude Shannon" : ev.author.split(",")[0].split("&")[0].trim()}</span>
         </div>
       </div>
@@ -1027,8 +1235,11 @@ function renderTimeline() {
   container.querySelectorAll(".tl-author-tag").forEach(tag => {
     tag.addEventListener("click", () => {
       const author = authors.find(a => a.id === tag.dataset.authorId);
-      if (author) openDetail(author);
+      if (author) openAuthorDetail(author);
     });
+  });
+  container.querySelectorAll("[data-action='model']").forEach(tag => {
+    tag.addEventListener("click", () => openModelDetail(tag.dataset.id));
   });
 }
 
@@ -1046,6 +1257,7 @@ document.querySelectorAll("nav button").forEach(btn => {
 
 document.getElementById("search").addEventListener("input", e => renderAuthors(e.target.value));
 document.getElementById("searchConcepts").addEventListener("input", e => renderConcepts(e.target.value));
+document.getElementById("searchOuvrages").addEventListener("input", e => renderOuvrages(e.target.value));
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeDetail(); });
 
 // ═══════════════════════════════════════════
@@ -1055,6 +1267,7 @@ renderModels();
 renderAuthors();
 renderConceptFilters();
 renderConcepts();
+renderOuvrages();
 renderTimeline();
 </script>
 </body>
