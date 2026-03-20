@@ -402,6 +402,7 @@ function renderGlobalSeanceFilter() {
       btn.classList.add("active");
       activeSeanceFilter = btn.dataset.seance === "all" ? null : btn.dataset.seance;
       renderAll();
+      pushState();
     });
   });
 }
@@ -529,6 +530,7 @@ function renderConceptFilters() {
       btn.classList.add("active");
       activeModelFilter = btn.dataset.model === "all" ? null : btn.dataset.model;
       renderConcepts(document.getElementById("searchConcepts").value);
+      pushState();
     });
   });
 
@@ -538,6 +540,7 @@ function renderConceptFilters() {
       btn.classList.add("active");
       activeAuthorFilter = btn.dataset.author === "all" ? null : btn.dataset.author;
       renderConcepts(document.getElementById("searchConcepts").value);
+      pushState();
     });
   });
 }
@@ -926,6 +929,78 @@ function renderTimeline() {
 }
 
 // ═══════════════════════════════════════════
+//  URL STATE MANAGEMENT
+// ═══════════════════════════════════════════
+function getActiveView() {
+  const btn = document.querySelector("nav button.active");
+  return btn ? btn.dataset.view : "models";
+}
+
+function stateToHash() {
+  const p = new URLSearchParams();
+  p.set("v", getActiveView());
+  if (activeSeanceFilter) p.set("seance", activeSeanceFilter);
+  if (activeModelFilter) p.set("model", activeModelFilter);
+  if (activeAuthorFilter) p.set("author", activeAuthorFilter);
+  const view = getActiveView();
+  let q = "";
+  if (view === "authors") q = document.getElementById("search").value;
+  else if (view === "concepts") q = document.getElementById("searchConcepts").value;
+  else if (view === "ouvrages") q = document.getElementById("searchOuvrages").value;
+  if (q) p.set("q", q);
+  return "#" + p.toString();
+}
+
+function pushState() {
+  const hash = stateToHash();
+  if (window.location.hash !== hash) {
+    history.replaceState(null, "", hash);
+  }
+}
+
+function applyHash(doRender) {
+  const raw = window.location.hash.replace(/^#/, "");
+  if (!raw) { if (doRender) initRender(); return; }
+  const p = new URLSearchParams(raw);
+
+  // View/tab
+  const view = p.get("v") || "models";
+  document.querySelectorAll("nav button").forEach(b => b.classList.remove("active"));
+  const targetBtn = document.querySelector(`nav button[data-view="${view}"]`);
+  if (targetBtn) targetBtn.classList.add("active");
+  document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
+  const targetView = document.getElementById(view);
+  if (targetView) targetView.classList.add("active");
+
+  // Séance filter
+  activeSeanceFilter = p.get("seance") || null;
+  document.querySelectorAll("#globalSeanceFilter .seance-filter").forEach(b => {
+    b.classList.toggle("active", (activeSeanceFilter ? b.dataset.seance === activeSeanceFilter : b.dataset.seance === "all"));
+  });
+
+  // Concept filters
+  activeModelFilter = p.get("model") || null;
+  activeAuthorFilter = p.get("author") || null;
+
+  // Search queries
+  const q = p.get("q") || "";
+  if (view === "authors") document.getElementById("search").value = q;
+  else if (view === "concepts") document.getElementById("searchConcepts").value = q;
+  else if (view === "ouvrages") document.getElementById("searchOuvrages").value = q;
+
+  if (doRender) initRender();
+}
+
+function initRender() {
+  renderModels();
+  renderAuthors(document.getElementById("search").value);
+  renderConceptFilters();
+  renderConcepts(document.getElementById("searchConcepts").value);
+  renderOuvrages(document.getElementById("searchOuvrages").value);
+  renderTimeline();
+}
+
+// ═══════════════════════════════════════════
 //  NAV
 // ═══════════════════════════════════════════
 document.querySelectorAll("nav button").forEach(btn => {
@@ -934,21 +1009,19 @@ document.querySelectorAll("nav button").forEach(btn => {
     btn.classList.add("active");
     document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
     document.getElementById(btn.dataset.view).classList.add("active");
+    pushState();
   });
 });
 
-document.getElementById("search").addEventListener("input", e => renderAuthors(e.target.value));
-document.getElementById("searchConcepts").addEventListener("input", e => renderConcepts(e.target.value));
-document.getElementById("searchOuvrages").addEventListener("input", e => renderOuvrages(e.target.value));
+document.getElementById("search").addEventListener("input", e => { renderAuthors(e.target.value); pushState(); });
+document.getElementById("searchConcepts").addEventListener("input", e => { renderConcepts(e.target.value); pushState(); });
+document.getElementById("searchOuvrages").addEventListener("input", e => { renderOuvrages(e.target.value); pushState(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeDetail(); });
+
+window.addEventListener("hashchange", () => applyHash(true));
 
 // ═══════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════
 renderGlobalSeanceFilter();
-renderModels();
-renderAuthors();
-renderConceptFilters();
-renderConcepts();
-renderOuvrages();
-renderTimeline();
+applyHash(true);
