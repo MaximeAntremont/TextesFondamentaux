@@ -27,8 +27,8 @@ const models = [
     period: "Années 1950-1980",
     desc: "Analyse interactionniste des microphénomènes sociaux par la métaphore théâtrale. Chaque individu est un « acteur » qui joue des rôles sur différentes « scènes », gère sa façade et protège sa face. Le moi n'est pas une essence mais le produit des rites quotidiens d'interaction. L'observation des stigmates et des « ratés » révèle les normes sociales invisibles.",
     concepts: "Interaction (focalisée / non focalisée), métaphore théâtrale, façade, face, rites d'interaction, distance au rôle, stigmate et stigmatisation, membrane, engagement de face, immersion.",
-    authors: ["Erving Goffman", "Anthony Pecqueux"],
-    sepieces: ["1", "2"]
+    authors: ["Erving Goffman", "Anthony Pecqueux", "Oumaya Hidri Neys"],
+    sepieces: ["1", "2", "3"]
   },
   {
     id: "observation",
@@ -113,11 +113,11 @@ const authors = [
     id: "goffman", name: "Erving Goffman", dates: "1922 – 1982", models: ["microsociologie"], sepieces: ["1", "2"],
     concepts: [
       { name: "Interaction focalisée / non focalisée", def: "Focalisée : les personnes collaborent pour maintenir un centre d'intérêt unique (conversation). Non focalisée : gestion de la coprésence (un coup d'œil, entrer dans un champ visuel).", sepieces: ["1"] },
-      { name: "Métaphore théâtrale", def: "La vie sociale est analysée comme une représentation : chacun joue des rôles sur une scène, avec une façade, un décor, et des coulisses. La réalité est une construction collective.", sepieces: ["1"] },
-      { name: "Façade", def: "Ensemble d'éléments (expression verbale, gestes, postures, vêtements, décor) permettant à l'acteur de contrôler l'image qu'il projette.", sepieces: ["1"] },
+      { name: "Métaphore théâtrale", def: "La vie sociale est analysée comme une représentation : chacun joue des rôles sur une scène, avec une façade, un décor, et des coulisses. La réalité est une construction collective.", sepieces: ["1", "3"] },
+      { name: "Façade", def: "Ensemble d'éléments (expression verbale, gestes, postures, vêtements, décor) permettant à l'acteur de contrôler l'image qu'il projette.", sepieces: ["1", "3"] },
       { name: "Face", def: "Valeur sociale positive qu'une personne revendique à travers sa ligne d'action. Chacun doit préserver sa propre face et celle de ses partenaires.", sepieces: ["1"] },
       { name: "Rites d'interaction", def: "Échanges de politesses, tact, savoir-vivre qui maintiennent l'ordre social. La face sociale est un prêt consenti par la société : si on ne s'en montre pas digne, elle est retirée.", sepieces: ["1"] },
-      { name: "Distance au rôle", def: "Degré d'implication ou de détachement par rapport au rôle joué dans la situation.", sepieces: ["1"] },
+      { name: "Distance au rôle", def: "Degré d'implication ou de détachement par rapport au rôle joué dans la situation.", sepieces: ["1", "3"] },
       { name: "Stigmate et stigmatisation", def: "Un attribut qui disqualifie dans les interactions. Le stigmate est variable selon les situations, visible ou invisible. Son observation révèle les normes sociales invisibles.", sepieces: ["1"] },
       { name: "Passing (dissimulation du stigmate)", def: "Stratégie consistant à dissimuler un attribut stigmatisant pour feindre d'appartenir à la « norme » (ex : cacher son accent).", sepieces: ["1"] },
       { name: "Engagement de face", def: "Dans une interaction focalisée, les participants s'engagent mutuellement, mobilisant leur attention. Cet engagement est indissociable de son envers : une « inattention sans effort » vis-à-vis du monde environnant.", sepieces: ["2"] },
@@ -143,7 +143,7 @@ const authors = [
     id: "elias", name: "Norbert Elias", dates: "1897 – 1990", models: ["observation"], sepieces: ["1"],
     concepts: [
       { name: "Processus de civilisation", def: "Évolution historique (XIe – XXe siècle) par laquelle les comportements liés aux fonctions naturelles (manger, se moucher, etc.) sont progressivement régulés, ritualisés et masqués." },
-      { name: "Autocontraintes", def: "Intériorisation des règles extérieures : la norme sociale n'a plus besoin d'être imposée de l'extérieur car l'individu l'a faite sienne." },
+      { name: "Autocontraintes", def: "Intériorisation des règles extérieures : la norme sociale n'a plus besoin d'être imposée de l'extérieur car l'individu l'a faite sienne.", sepieces: ["1", "3"] },
       { name: "Civilité", def: "Concept issu du Traité de bonnes manières d'Érasme (1530). Le comportement extérieur relève d'un apprentissage social, pas seulement d'une disposition innée." }
     ]
   },
@@ -164,7 +164,7 @@ const authors = [
   {
     id: "goodenough", name: "Ward Goodenough", dates: "1919 – 2013", models: ["palo-alto"], sepieces: ["1"],
     concepts: [
-      { name: "Culture comme compétence", def: "La culture est « tout ce qu'il faut savoir pour être membre » d'un groupe. Définition minimale qui ouvre la voie à l'analyse des règles explicites et implicites, du savoir latent et manifeste." }
+      { name: "Culture comme compétence", def: "La culture est « tout ce qu'il faut savoir pour être membre » d'un groupe. Définition minimale qui ouvre la voie à l'analyse des règles explicites et implicites, du savoir latent et manifeste.", sepieces: ["1", "3"] }
     ]
   },
   {
@@ -177,13 +177,27 @@ const authors = [
   {
     id: "scott", name: "James C. Scott", dates: "1936 – 2024", models: ["microsociologie"], sepieces: ["1"],
     concepts: [
-      { name: "Arts de la résistance", def: "Analyse des rapports de domination : les normes sociales (étiquette, bienséance) nous forcent à sacrifier de la franchise pour entretenir des relations. Cette prudence peut être stratégique face aux rapports de pouvoir." }
+      { name: "Arts de la résistance", def: "Analyse des rapports de domination : les normes sociales (étiquette, bienséance) nous forcent à sacrifier de la franchise pour entretenir des relations. Cette prudence peut être stratégique face aux rapports de pouvoir.", sepieces: ["1", "3"] }
     ]
   },
   {
     id: "olivesi", name: "Stéphane Olivesi", dates: "", models: ["palo-alto"], sepieces: ["1"],
     concepts: [
       { name: "Critique de Hall", def: "Les variations culturelles et spatiales mises en évidence par Hall ne doivent pas occulter les différences sociales au sein d'une même culture. Un individu communique souvent mieux avec quelqu'un de culture différente mais de même niveau social." }
+    ]
+  },
+  {
+    id: "hidri-neys", name: "Oumaya Hidri Neys", dates: "1974 –", models: ["microsociologie"], sepieces: ["3"],
+    concepts: [
+      { name: "Capital corporel", def: "Le corps comme ressource distinctive sur le marché du travail. Dans les professions de (re)présentation, les propriétés physiques (silhouette, coiffure, maquillage, attitudes) sont évaluées selon une norme de féminité et constituent un actif que les individus cherchent à rentabiliser." },
+      { name: "Professions de (re)présentation", def: "Professions (accueil, caisse, hôtesserie) où le corps et l'apparence sont au cœur du travail. Bourdieu soulignait qu'il y existe « un marché légitime des propriétés corporelles » : « on représente bien parce qu'on présente bien »." },
+      { name: "Travail des apparences", def: "Ensemble des pratiques corporelles (maquillage, coiffure, vêtements, postures) mobilisées comme compétences professionnelles informelles. Ce travail est implicitement attendu mais jamais formellement évalué, ce qui contribue à sa naturalisation." },
+      { name: "Prescriptions formelles vs informelles", def: "Décalage entre les annonces officielles (profil de poste) — muettes sur l'apparence — et les prescriptions orales transmises lors des entretiens de recrutement, qui imposent implicitement des normes de féminité." },
+      { name: "Violence symbolique (Bourdieu)", def: "Violence exercée sur les hôtesses avec leur consentement : elles adhèrent aux logiques de sélection qui les discriminent, en partie parce qu'elles partagent les objectifs (valoriser leur capital corporel). Cette complicité est une condition de l'efficacité de cette violence." },
+      { name: "Représentations anticipatrices", def: "Images stéréotypées et idéalisées que les hôtesses se font du métier avant d'y entrer (être « sur le devant de la scène », être reconnue pour sa beauté). Ces représentations sont mises à mal dès les premiers jours par la réalité du travail." },
+      { name: "Invisibilité au travail", def: "Expérience répétée de l'absence d'attention des clients (1 sur 3 ignore l'hôtesse de caisse). Source principale de désenchantement pour des travailleuses qui avaient investi dans l'emploi pour valoriser leur capital corporel." },
+      { name: "Naturalisation des qualifications féminines", def: "Processus par lequel les compétences relationnelles et corporelles sont renvoyées à des « dons naturels » typiquement féminins plutôt qu'à des qualifications acquises. Cette naturalisation maintient ces compétences informelles et non évaluées." },
+      { name: "Stratégies défensives (3 types)", def: "Trois réponses au « choc » des débuts : 1) Envisager de nouveaux rapports sociaux (missions complémentaires, valorisation auprès des collègues et de la hiérarchie). 2) Revoir son rapport au travail (rapport instrumental, « minimum syndical »). 3) Planifier sa démission vers des enseignes valorisant davantage le capital corporel." }
     ]
   },
   {
@@ -235,6 +249,7 @@ const timelineEvents = [
   { year: 1997, type: "work", title: "De l'anthropologie à l'épistémologie de la communication", author: "Stéphane Olivesi", authorId: "olivesi", model: "palo-alto", desc: "Critique des travaux de Hall : les différences sociales transcendent souvent les différences culturelles.", sepieces: ["1"] },
   { year: 2000, type: "work", title: "Observer la communication", author: "Bruno Ollivier", authorId: "ollivier", model: "palo-alto", desc: "Naissance d'une interdiscipline. Formulation de la métaphore orchestrale et du concept de dispositif.", sepieces: ["1"] },
   { year: 2000, type: "work", title: "Y a-t-il (vraiment) des technologies de l'information ?", author: "Yves Jeanneret", authorId: "jeanneret", model: "telegraphique", desc: "Distinction fondamentale entre information mathématique et information sociale. Critique de la confusion entretenue par l'expression « technologies de l'information ».", sepieces: ["1"] },
+  { year: 2013, type: "work", title: "Le jeu des apparences : piège ou profit ?", author: "Oumaya Hidri Neys", authorId: "hidri-neys", model: "microsociologie", desc: "Enquête socio. sur les hôtesses Décathlon. Capital corporel, violence symbolique, travail des apparences. Mobilise Goffman (façade, présentation de soi) et Bourdieu (professions de représentation).", sepieces: ["3"] },
   { year: 2020, type: "work", title: "L'attention et ses envers", author: "Anthony Pecqueux", authorId: "pecqueux", model: "microsociologie", desc: "Étude ethnographique de l'immersion dans un cercle de parole (le Parlons-En). Pecqueux mobilise Goffman (Fun in Games) pour analyser les mécanismes d'attention, d'inattention, de membrane et de care dans l'interaction.", sepieces: ["2"] }
 ];
 
@@ -248,7 +263,7 @@ function norm(str) {
 // ═══════════════════════════════════════════
 //  SÉANCE LABELS & TAG HELPER
 // ═══════════════════════════════════════════
-const seanceLabels = { "1": "CM", "2": "Séance 2" };
+const seanceLabels = { "1": "CM", "2": "Séance 2", "3": "Séance 3" };
 function seanceLabel(s) { return seanceLabels[s] || `Séance ${s}`; }
 function seanceShort(s) { return s === "1" ? "CM" : `S${s}`; }
 
@@ -833,6 +848,18 @@ const ouvrages = [
     desc: "Étude ethnographique de l'immersion dans le Parlons-En, un cercle de parole à Grenoble. Pecqueux mobilise le cadre théorique de Goffman (Fun in Games, 1961) pour analyser la membrane, l'attention/inattention, les activités de care invisibilisées et la passibilité des participants.",
     concepts: ["Immersion interactionnelle", "Passibilité", "Fonctions de la membrane (spatiale et sociale)", "Care et invisibilisation"],
     sepieces: ["2"]
+  },
+  {
+    title: "Le jeu des apparences : piège ou profit ?",
+    titleFr: "",
+    year: 2013,
+    author: "Oumaya Hidri Neys",
+    authorId: "hidri-neys",
+    ref: "Hidri Neys Oumaya, « Le jeu des apparences : piège ou profit ? Enquête auprès des hôtesses d'accueil et de caisse de la distribution sportive », Travail et Emploi, n° 134, avril-juin 2013, p. 75-89.",
+    model: "microsociologie",
+    desc: "Enquête sociologique auprès des hôtesses de Décathlon. L'article analyse comment les normes implicites d'apparence physique structurent le recrutement et le travail, générant un « choc » des débuts (décalage entre représentations anticipatrices et réalité) et trois stratégies défensives. Mobilise Goffman (façade, présentation de soi) et Bourdieu (violence symbolique, capital corporel, professions de représentation).",
+    concepts: ["Capital corporel", "Professions de (re)présentation", "Travail des apparences", "Prescriptions formelles vs informelles", "Représentations anticipatrices", "Invisibilité au travail", "Stratégies défensives (3 types)"],
+    sepieces: ["3"]
   }
 ];
 
