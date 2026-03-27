@@ -89,7 +89,7 @@ const authors = [
       { name: "Axiome 3 : Ponctuation", def: "Toute communication est une suite d'interactions que chacun ponctue à sa manière (chacun découpe le flux différemment)." },
       { name: "Axiome 4 : Codes analogiques et digitaux", def: "La communication utilise simultanément des codes digitaux (langage verbal, discret) et analogiques (gestes, ton, continu)." },
       { name: "Axiome 5 : Symétrie et complémentarité", def: "Les échanges sont soit symétriques (relation d'égalité) soit complémentaires (relation de différence), et la rétroaction renforce ou modifie le système." },
-      { name: "Double contrainte (double bind)", def: "Communication paradoxale : un message affirme quelque chose (contenu) et son contraire (relation), dans une situation où le récepteur ne peut pas sortir du cadre. Ex : « Soyez spontané »." },
+      { name: "Double contrainte (double bind)", def: "Communication paradoxale : un message affirme quelque chose (contenu) et son contraire (relation), dans une situation où le récepteur ne peut pas sortir du cadre. Ex : « Soyez spontané ».", sepieces: ["1", "3"] },
       { name: "Communication pathologique", def: "Pour chacun des cinq axiomes, il existe une forme pathologique de communication. Résolutions possibles : métacommunication ou repli." }
     ]
   },
