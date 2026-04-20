@@ -112,22 +112,22 @@ const authors = [
   {
     id: "goffman", name: "Erving Goffman", dates: "1922 – 1982", models: ["microsociologie"], sepieces: ["1", "2"],
     concepts: [
-      { name: "Interaction focalisée / non focalisée", def: "Focalisée : les personnes collaborent pour maintenir un centre d'intérêt unique (conversation). Non focalisée : gestion de la coprésence (un coup d'œil, entrer dans un champ visuel).", sepieces: ["1"] },
-      { name: "Métaphore théâtrale", def: "La vie sociale est analysée comme une représentation : chacun joue des rôles sur une scène, avec une façade, un décor, et des coulisses. La réalité est une construction collective.", sepieces: ["1", "3"] },
+      { name: "Interaction focalisée / non focalisée", def: "Focalisée : les personnes collaborent pour maintenir un centre d'intérêt unique (conversation). Non focalisée : gestion de la coprésence (un coup d'œil, entrer dans un champ visuel).", sepieces: ["1", "5"] },
+      { name: "Métaphore théâtrale", def: "La vie sociale est analysée comme une représentation : chacun joue des rôles sur une scène, avec une façade, un décor, et des coulisses. La réalité est une construction collective.", sepieces: ["1", "3", "5"] },
       { name: "Façade", def: "Ensemble d'éléments (expression verbale, gestes, postures, vêtements, décor) permettant à l'acteur de contrôler l'image qu'il projette.", sepieces: ["1", "3", "4"] },
       { name: "Face", def: "Valeur sociale positive qu'une personne revendique à travers sa ligne d'action. Chacun doit préserver sa propre face et celle de ses partenaires.", sepieces: ["1"] },
       { name: "Rites d'interaction", def: "Échanges de politesses, tact, savoir-vivre qui maintiennent l'ordre social. La face sociale est un prêt consenti par la société : si on ne s'en montre pas digne, elle est retirée.", sepieces: ["1"] },
-      { name: "Distance au rôle", def: "Degré d'implication ou de détachement par rapport au rôle joué dans la situation.", sepieces: ["1", "3", "4"] },
+      { name: "Distance au rôle", def: "Degré d'implication ou de détachement par rapport au rôle joué dans la situation.", sepieces: ["1", "3", "4", "5"] },
       { name: "Stigmate et stigmatisation", def: "Un attribut qui disqualifie dans les interactions. Le stigmate est variable selon les situations, visible ou invisible. Son observation révèle les normes sociales invisibles.", sepieces: ["1"] },
-      { name: "Passing (dissimulation du stigmate)", def: "Stratégie consistant à dissimuler un attribut stigmatisant pour feindre d'appartenir à la « norme » (ex : cacher son accent).", sepieces: ["1"] },
-      { name: "Engagement de face", def: "Dans une interaction focalisée, les participants s'engagent mutuellement, mobilisant leur attention. Cet engagement est indissociable de son envers : une « inattention sans effort » vis-à-vis du monde environnant.", sepieces: ["2"] },
-      { name: "Membrane", def: "Frontière perméable et sélective autour d'une interaction. Ni barrière étanche ni ouverture totale, elle fonctionne comme un tamis qui autorise certains éléments extérieurs à s'infiltrer tout en en bloquant d'autres. Sa fonction est de sélectionner ce qui du monde environnant peut pénétrer l'interaction.", sepieces: ["2"] },
-      { name: "Règles de non-pertinence", def: "Règles tacites se déployant à même la situation pour organiser, en pratique, ce qui du monde environnant n'a pas à pénétrer l'interaction en cours. Elles contribuent à fabriquer la frontière (membrane) autour des participants.", sepieces: ["2"] },
-      { name: "Règles de transformation", def: "Règles qui opèrent à même l'interaction (et non édictées en amont) pour constituer un ordre local, un « monde en soi » (sui generis), c'est-à-dire un monde de rôles et d'événements accompli localement.", sepieces: ["2"] },
+      { name: "Passing (dissimulation du stigmate)", def: "Stratégie consistant à dissimuler un attribut stigmatisant pour feindre d'appartenir à la « norme » (ex : cacher son accent).", sepieces: ["1", "5"] },
+      { name: "Engagement de face", def: "Dans une interaction focalisée, les participants s'engagent mutuellement, mobilisant leur attention. Cet engagement est indissociable de son envers : une « inattention sans effort » vis-à-vis du monde environnant.", sepieces: ["2", "5"] },
+      { name: "Membrane", def: "Frontière perméable et sélective autour d'une interaction. Ni barrière étanche ni ouverture totale, elle fonctionne comme un tamis qui autorise certains éléments extérieurs à s'infiltrer tout en en bloquant d'autres. Sa fonction est de sélectionner ce qui du monde environnant peut pénétrer l'interaction.", sepieces: ["2", "5"] },
+      { name: "Règles de non-pertinence", def: "Règles tacites se déployant à même la situation pour organiser, en pratique, ce qui du monde environnant n'a pas à pénétrer l'interaction en cours. Elles contribuent à fabriquer la frontière (membrane) autour des participants.", sepieces: ["2", "5"] },
+      { name: "Règles de transformation", def: "Règles qui opèrent à même l'interaction (et non édictées en amont) pour constituer un ordre local, un « monde en soi » (sui generis), c'est-à-dire un monde de rôles et d'événements accompli localement.", sepieces: ["2", "5"] },
       { name: "Fonction d'accordance", def: "Ensemble des techniques de mise en rythme et d'organisation spatiale et temporelle qui préparent et maintiennent l'immersion dans l'interaction (ex. : disposition en cercle, passage du micro, rituels de début et de fin).", sepieces: ["2"] },
-      { name: "Incidents et intégrations", def: "Les incidents sont des événements qui font soudainement monter le niveau de tension (lapsus, mise en cause…). Les intégrations sont les actes qui cherchent à transformer ces incidents pour les faire entrer dans le cadre et diminuer la discordance.", sepieces: ["2", "4"] },
+      { name: "Incidents et intégrations", def: "Les incidents sont des événements qui font soudainement monter le niveau de tension (lapsus, mise en cause…). Les intégrations sont les actes qui cherchent à transformer ces incidents pour les faire entrer dans le cadre et diminuer la discordance.", sepieces: ["2", "4", "5"] },
       { name: "Débordements", def: "Manifestations émotionnelles visibles qui excèdent le cadre de l'interaction. Les engagements de face rendent les émotions à fleur de peau. Les débordements peuvent être intégrés par une « non-perception laborieuse », mais cela augmente la tension globale.", sepieces: ["2"] },
-      { name: "Jeux de scène secondaires (byplay)", def: "Actions parallèles qui se déroulent en marge de l'interaction principale (ex. : quitter le cercle pour se soulager, s'entretenir en aparté). Ils ont souvent un effet de « soupape » dans l'économie attentionnelle de la rencontre.", sepieces: ["2"] },
+      { name: "Jeux de scène secondaires (byplay)", def: "Actions parallèles qui se déroulent en marge de l'interaction principale (ex. : quitter le cercle pour se soulager, s'entretenir en aparté). Ils ont souvent un effet de « soupape » dans l'économie attentionnelle de la rencontre.", sepieces: ["2", "5"] },
       { name: "Inattention sans effort", def: "Envers nécessaire de l'attention focalisée : plus on s'immerge dans une interaction, plus le monde environnant et ses sources de distraction deviennent transparents, sans qu'il en coûte d'effort conscient. C'est la condition même de l'immersion.", sepieces: ["2"] }
     ]
   },
@@ -137,33 +137,82 @@ const authors = [
       { name: "Anthropologie de la communication", def: "Approche qui considère le modèle télégraphique comme un modèle « indigène » occidental. Observer la communication, c'est s'intéresser aux règles explicites et implicites qui font de nous les membres d'une culture." },
       { name: "Simplification maîtrisée (silhouettage)", def: "Méthode d'observation consistant à éliminer les informations superfétatoires (psychologiques, vestimentaires) pour travailler avec des corps en mouvement, créant une rupture avec les fausses évidences du sens commun." },
       { name: "Communication orchestrale", def: "Métaphore centrale : la communication est comme un orchestre où chacun joue sa partition selon des règles communes. Les notions d'émetteur/récepteur s'effacent au profit de l'activité sociale collective." },
-      { name: "Communication comme performance de la culture", def: "La communication ne transmet pas simplement des informations : elle est la culture en acte. Chaque échange rejoue, actualise et transmet les normes, valeurs et identités du groupe. Appliqué à la famille SANNA : les journées en langue maternelle, les bénédictions et les récits des disparus sont autant de performances de la culture familiale.", sepieces: ["4"] },
-      { name: "On ne peut pas ne pas communiquer (Watzlawick / Palo Alto)", def: "Tout comportement, y compris le silence et l'inaction, est communicant et produit du sens dans la relation. Dans la famille SANNA : le silence dans le groupe WhatsApp est un acte de communication à part entière — maintenir le lien, temporiser avant de répondre, ou signifier une tension héritée.", sepieces: ["4"] },
-      { name: "Transmission culturelle et mémoire intergénérationnelle", def: "La communication comme modalité de transmission d'une mémoire et d'une culture, dans l'informel et dans des moments balisés. Dans la famille SANNA : publier des cérémonies filmées, encenser les disparus, rappeler les valeurs de l'aïeul — comprendre l'histoire familiale est présenté comme un « devoir ».", sepieces: ["4"] }
+      { name: "Communication comme performance de la culture", def: "La communication ne transmet pas simplement des informations : elle est la culture en acte. Chaque échange rejoue, actualise et transmet les normes, valeurs et identités du groupe.", sepieces: ["4"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Les journées en langue maternelle, les bénédictions ritualisées et les récits des disparus sont autant de performances de la culture familiale burkinabè dans un espace numérique diasporique." }
+        ]
+      },
+      { name: "On ne peut pas ne pas communiquer (Watzlawick / Palo Alto)", def: "Tout comportement, y compris le silence et l'inaction, est communicant et produit du sens dans la relation. Il n'existe pas de non-communication entre individus en présence ou en contact.", sepieces: ["4"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Le silence dans le groupe WhatsApp est un acte de communication à part entière : maintenir le lien, temporiser avant de répondre, ou signifier une tension héritée." }
+        ]
+      },
+      { name: "Transmission culturelle et mémoire intergénérationnelle", def: "La communication comme modalité de transmission d'une mémoire collective et d'une culture, dans des moments informels et dans des rituels balisés. L'échange devient le vecteur de la continuité identitaire du groupe.", sepieces: ["4"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Cérémonies filmées publiées dans le groupe, récits encensant les disparus, rappel des valeurs de l'aïeul — comprendre l'histoire familiale est présenté comme un devoir moral." }
+        ]
+      }
     ]
   },
   {
     id: "elias", name: "Norbert Elias", dates: "1897 – 1990", models: ["observation"], sepieces: ["1"],
     concepts: [
       { name: "Processus de civilisation", def: "Évolution historique (XIe – XXe siècle) par laquelle les comportements liés aux fonctions naturelles (manger, se moucher, etc.) sont progressivement régulés, ritualisés et masqués." },
-      { name: "Autocontraintes", def: "Intériorisation des règles extérieures : la norme sociale n'a plus besoin d'être imposée de l'extérieur car l'individu l'a faite sienne.", sepieces: ["1", "3"] },
+      { name: "Autocontraintes", def: "Intériorisation des règles extérieures : la norme sociale n'a plus besoin d'être imposée de l'extérieur car l'individu l'a faite sienne.", sepieces: ["1", "3", "5"] },
       { name: "Civilité", def: "Concept issu du Traité de bonnes manières d'Érasme (1530). Le comportement extérieur relève d'un apprentissage social, pas seulement d'une disposition innée." }
     ]
   },
   {
     id: "hymes", name: "Dell Hymes", dates: "1927 – 2009", models: ["speaking"], sepieces: ["1", "4"],
     concepts: [
-      { name: "Modèle SPEAKING", def: "Huit composantes de toute situation de communication : Setting (cadre), Participants, Ends (finalité), Acts (contenu et forme), Key (tonalité), Instrumentalities (moyens), Norms (d'interaction et d'interprétation), Genre (type d'activité de langage)." },
-      { name: "Compétence de communication", def: "Capacité à aborder les situations sociales dans leur diversité. Comprend trois dimensions : compétence linguistique, socioculturelle et logique." },
-      { name: "Communauté de communication", def: "Groupe d'êtres humains ayant en commun des pratiques et des règles de communication. La compétence de communication n'existe qu'au sein d'une telle communauté." },
-      { name: "S — Setting (Cadre / Décor)", def: "Cadre matériel et temporel de l'échange. Dans une communication médiatisée, il inclut la plateforme numérique et ses fonctionnalités techniques (asynchronicité, multimodalité, suppression de messages). Appliqué au groupe WhatsApp Famille SANNA : représentation virtuelle de la concession familiale de Botou.", sepieces: ["4"] },
-      { name: "P — Participants", def: "Ensemble des acteurs impliqués dans l'échange, classés selon leur statut, leur niveau d'interactivité et leurs compétences (techniques, linguistiques, généalogiques). Inclut les participants silencieux dont le poids est déterminant. Dans la famille SANNA : aînés actifs, cadets en auto-censure, tantes analphabètes silencieuses mais décisives.", sepieces: ["4"] },
-      { name: "E — Ends (Finalités)", def: "Objectifs poursuivis par les acteurs : buts collectifs (défense des valeurs du groupe) et buts individuels (positionnement, affirmation de soi). Les finalités peuvent être déclarées ou latentes. Dans la famille SANNA : finalité explicite = unité familiale ; finalité latente = maintien de l'autorité gérontocratique.", sepieces: ["4"] },
-      { name: "A — Acts (Contenu & forme des messages)", def: "Contenu thématique et forme des échanges : messages d'intérêt général, instructions, ordres, récits mémoriels, documents multimodaux (photos, vidéos, vocaux). Dans la famille SANNA : journées en langue maternelle, arbre généalogique partagé, bénédictions ritualisées, photos de cérémonies.", sepieces: ["4"] },
-      { name: "K — Key (Tonalité)", def: "Ton ou esprit dans lequel le message est émis (injonctif, déférent, cérémoniel). La tonalité varie selon le statut de l'émetteur et configure la réception indépendamment du contenu. Dans la famille SANNA : aînés prescriptifs/injonctifs, cadets déférents et en excuses anticipées.", sepieces: ["4"] },
-      { name: "I — Instrumentalities (Outils & supports)", def: "Canaux et supports mobilisés dans la communication. Dans un contexte numérique, les fonctionnalités techniques de la plateforme sont elles-mêmes porteuses de sens et de normes. Dans la famille SANNA : vocal (inclusif pour les analphabètes), image (photos = patrimoine vivant), écrit ; selfies tacitement bannis.", sepieces: ["4"] },
-      { name: "N — Norms (Normes d'interaction)", def: "Règles explicites et tacites qui régissent la prise de parole et la participation. Dans la famille SANNA, elles transposent les normes de l'arbre à palabre africain dans un espace numérique asynchrone : demande d'autorisation aux aînés, excuses anticipées, rappel de l'expertise avant de parler.", sepieces: ["4"] },
-      { name: "G — Genre (Type de discours)", def: "Catégorie de l'activité langagière dans laquelle s'inscrit l'échange : palabre, conseil, bénédiction, récit mémoriel, prêche. Le genre cadre les attentes des participants et structure le sens des actes. Dans la famille SANNA : « arbre à palabre virtuel », salutations islamiques universelles, deux sociolectes (langue maternelle / français).", sepieces: ["4"] }
+      { name: "Modèle SPEAKING", def: "Huit composantes de toute situation de communication : Setting (cadre), Participants, Ends (finalité), Acts (contenu et forme), Key (tonalité), Instrumentalities (moyens), Norms (d'interaction et d'interprétation), Genre (type d'activité de langage). L'intérêt du modèle réside dans l'articulation entre ces composantes plutôt que dans leur inventaire.", sepieces: ["1", "4", "5"] },
+      { name: "Compétence de communication", def: "Capacité à aborder les situations sociales dans leur diversité. Comprend trois dimensions : compétence linguistique (maîtrise des formes grammaticales), socioculturelle (connaissance des règles d'usage en situation) et logique (cohérence du discours)." },
+      { name: "Communauté de communication", def: "Groupe d'êtres humains ayant en commun des pratiques et des règles de communication. La compétence de communication n'existe qu'au sein d'une telle communauté : elle est toujours située et partagée.", sepieces: ["1", "5"] },
+      { name: "S — Setting (Cadre / Décor)", def: "Cadre matériel, spatial et temporel de l'échange. Inclut le lieu physique ou numérique et ses caractéristiques techniques qui orientent les comportements attendus et les formes de participation.", sepieces: ["1", "4", "5"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Le groupe WhatsApp reproduit numériquement la concession familiale de Botou : espace clos à entrée unique, incluant fonctionnalités d'asynchronicité, de suppression de messages et de multimodalité." },
+          { seance: "5", label: "BAC — manifestation (Gressot)", text: "La manifestation parisienne constitue le setting de départ. La zone rose redéfinit un micro-setting à l'intérieur de ce cadre : un espace-temps distinct entre les deux blocs." }
+        ]
+      },
+      { name: "P — Participants", def: "Ensemble des acteurs impliqués dans l'échange, caractérisés par leur statut, leur rôle, leur niveau d'interactivité et leurs compétences. Inclut les participants silencieux, dont le poids peut être déterminant.", sepieces: ["1", "4", "5"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Aînés actifs et prescriptifs, cadets en auto-censure, tantes analphabètes silencieuses mais décisives sur les décisions du groupe." },
+          { seance: "5", label: "BAC — manifestation (Gressot)", text: "Clowns, anges gardiens, CRS, manifestants, spectateurs — chacun avec un rôle et une compétence distincts au sein de la situation." }
+        ]
+      },
+      { name: "E — Ends (Finalités)", def: "Objectifs poursuivis par les acteurs dans l'échange : buts collectifs (finalités du groupe ou de l'activité) et buts individuels (positionnement, affirmation de soi). Les finalités peuvent être déclarées ou latentes.", sepieces: ["1", "4"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Finalité explicite : maintien de l'unité familiale. Finalité latente : reproduction de l'autorité gérontocratique et de la hiérarchie de genre." }
+        ]
+      },
+      { name: "A — Acts (Contenu & forme des messages)", def: "Contenu thématique et forme des échanges : ce qui est dit et comment c'est dit. Comprend la sélection des sujets, le choix des genres discursifs et la structuration des tours de parole.", sepieces: ["1", "4"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Journées en langue maternelle, arbre généalogique partagé, bénédictions ritualisées, photos de cérémonies, vocaux (inclusifs pour les analphabètes)." }
+        ]
+      },
+      { name: "K — Key (Tonalité)", def: "Ton ou esprit dans lequel le message est émis — sérieux, ironique, solennel, ludique, etc. La tonalité varie selon le statut de l'émetteur et la situation, et configure la réception du message indépendamment de son contenu.", sepieces: ["1", "4", "5"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Aînés prescriptifs et injonctifs ; cadets déférents et en excuses anticipées — la même information change de sens selon qui l'énonce." },
+          { seance: "5", label: "BAC — zone rose (Gressot)", text: "Les clowns imposent un changement de key : la confrontation (sérieux, tension) bascule dans le registre comique et absurde, désorientant les deux camps." }
+        ]
+      },
+      { name: "I — Instrumentalities (Outils & supports)", def: "Canaux et supports mobilisés dans la communication. Le choix du canal porte en lui-même du sens et des normes sociales : chaque medium ouvre et ferme des possibilités d'interaction.", sepieces: ["1", "4", "5"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Vocal (inclusif pour les analphabètes), image (photos = patrimoine vivant), écrit formel ; selfies tacitement bannis car jugés trop individualistes." },
+          { seance: "5", label: "BAC — manifestation (Gressot)", text: "Le corps (nez rouge, maquillage, gestuelle) est le canal premier, non verbal. Sur les réseaux internes, jeux de mots et caractères spéciaux brouillent la lecture externe." }
+        ]
+      },
+      { name: "N — Norms (Normes d'interaction)", def: "Règles explicites et tacites qui régissent la prise de parole, la participation et l'interprétation des messages. Ces normes sont intériorisées par les membres de la communauté de communication.", sepieces: ["1", "4"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Demande d'autorisation aux aînés avant de prendre la parole, excuses anticipées, rappel de l'expertise avant d'émettre un avis — transposition des normes de l'arbre à palabre africain en espace numérique." }
+        ]
+      },
+      { name: "G — Genre (Type de discours)", def: "Catégorie de l'activité langagière dans laquelle s'inscrit l'échange : conversation, débat, palabre, prêche, performance, etc. Le genre cadre les attentes des participants et structure le sens de leurs actes.", sepieces: ["1", "4", "5"],
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "« Arbre à palabre virtuel », salutations islamiques universelles, bénédictions, récits mémoriels — deux sociolectes (langue maternelle / français) selon le statut." },
+          { seance: "5", label: "BAC — zone rose (Gressot)", text: "Le genre glisse de la confrontation politique à la performance clownesque : ce changement de genre décontenance les deux camps et suspend les règles habituelles de la manifestation." }
+        ]
+      }
     ]
   },
   {
@@ -175,7 +224,7 @@ const authors = [
   {
     id: "goodenough", name: "Ward Goodenough", dates: "1919 – 2013", models: ["palo-alto"], sepieces: ["1"],
     concepts: [
-      { name: "Culture comme compétence", def: "La culture est « tout ce qu'il faut savoir pour être membre » d'un groupe. Définition minimale qui ouvre la voie à l'analyse des règles explicites et implicites, du savoir latent et manifeste.", sepieces: ["1", "3"] }
+      { name: "Culture comme compétence", def: "La culture est « tout ce qu'il faut savoir pour être membre » d'un groupe. Définition minimale qui ouvre la voie à l'analyse des règles explicites et implicites, du savoir latent et manifeste.", sepieces: ["1", "3", "5"] }
     ]
   },
   {
@@ -188,7 +237,7 @@ const authors = [
   {
     id: "scott", name: "James C. Scott", dates: "1936 – 2024", models: ["microsociologie"], sepieces: ["1"],
     concepts: [
-      { name: "Arts de la résistance", def: "Analyse des rapports de domination : les normes sociales (étiquette, bienséance) nous forcent à sacrifier de la franchise pour entretenir des relations. Cette prudence peut être stratégique face aux rapports de pouvoir.", sepieces: ["1", "3"] }
+      { name: "Arts de la résistance", def: "Analyse des rapports de domination : les normes sociales (étiquette, bienséance) nous forcent à sacrifier de la franchise pour entretenir des relations. Cette prudence peut être stratégique face aux rapports de pouvoir.", sepieces: ["1", "3", "5"] }
     ]
   },
   {
@@ -214,18 +263,45 @@ const authors = [
   {
     id: "sana", name: "Sana Halizata", dates: "", models: ["speaking", "microsociologie"], sepieces: ["4"],
     concepts: [
-      { name: "Espace public domestique (concession virtuelle)", def: "Le groupe WhatsApp fonctionne comme un espace à la fois public (visible de tous les membres) et domestique (réservé à la famille). Il reproduit numériquement la concession familiale de Botou — espace clos à entrée unique où se gèrent les affaires communes. Y entrer fait de vous un Sanna : la membrane d'entrée valide le statut de membre." },
-      { name: "Self deception (tromperie à l'égard de soi-même)", def: "Mécanisme psychologique et social (notion de Cabin et Dortier) par lequel un individu ou un groupe construit une représentation idéalisée de lui-même en occultant les contradictions et réalités déplaisantes. Ce n'est pas un mensonge conscient : c'est une mise en récit sélective de soi visant à préserver une image cohérente et valorisante. Dans la famille SANNA : les rivalités entre co-épouses, les méfiances héritées et les tensions larvées sont effacées du récit groupal au profit du mythe d'une famille unie." },
-      { name: "Autorité gérontocratique numérique", def: "Transposition de la hiérarchie d'âge traditionnelle (arbre à palabre) dans un espace numérique asynchrone. Les aînés maintiennent leur autorité via la désignation des rôles, le rappel incessant des normes et la gestion de la membrane d'entrée (administrateurs du groupe)." },
-      { name: "Dispositif techno-sémiotique", def: "WhatsApp comme plateforme dont les fonctionnalités techniques (vocal, image, asynchronicité, suppression) sont elles-mêmes porteuses de sens et de normes sociales. Le support reconfigure les rapports entre individus et réintègre les décalages de statut par des rappels explicites." }
+      { name: "Espace public domestique (concession virtuelle)", def: "Un groupe de communication peut fonctionner comme un espace à la fois public (visible de tous les membres) et domestique (réservé à une communauté fermée). L'entrée dans cet espace vaut validation du statut de membre — ce que Goffman appellerait le franchissement de la membrane.",
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Le groupe reproduit numériquement la concession familiale de Botou : espace clos à entrée unique, géré par des administrateurs-aînés, où se règlent les affaires communes de la famille burkinabè diasporique." }
+        ]
+      },
+      { name: "Self deception (tromperie à l'égard de soi-même)", def: "Mécanisme psychologique et social (Cabin & Dortier) par lequel un individu ou un groupe construit une représentation idéalisée de lui-même en occultant les contradictions et réalités déplaisantes. Ce n'est pas un mensonge conscient : c'est une mise en récit sélective visant à préserver une image cohérente et valorisante.",
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Rivalités entre co-épouses, méfiances héritées et tensions larvées sont effacées du récit groupal au profit du mythe d'une famille unie et solidaire." }
+        ]
+      },
+      { name: "Autorité gérontocratique numérique", def: "Transposition d'une hiérarchie d'âge traditionnelle dans un espace numérique asynchrone. Les aînés maintiennent leur autorité via la désignation des rôles, le rappel des normes et le contrôle de la membrane d'entrée du groupe.",
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Les aînés sont administrateurs du groupe WhatsApp, prescrivent les thèmes et les formes d'échange, et sanctionnent implicitement les écarts aux normes de l'arbre à palabre." }
+        ]
+      },
+      { name: "Dispositif techno-sémiotique", def: "Plateforme ou outil de communication dont les fonctionnalités techniques sont elles-mêmes porteuses de sens et de normes sociales. Le support reconfigure les rapports entre individus au-delà du simple contenu transmis.",
+        examples: [
+          { seance: "4", label: "Famille SANNA (WhatsApp)", text: "Les fonctionnalités de WhatsApp (vocal, image, asynchronicité, suppression de messages) réintègrent les décalages de statut et permettent l'inclusion des membres analphabètes via les messages vocaux." }
+        ]
+      }
+    ]
+  },
+  {
+    id: "gressot", name: "Romain Gressot", dates: "", models: ["microsociologie", "observation"], sepieces: ["5"],
+    concepts: [
+      { name: "Zone rose (pink zone)", def: "Tactique militante non violente consistant à investir l'espace laissé entre manifestants et forces de l'ordre sur le point d'en découdre, couplée à la provocation du rire (jeux, danses, absurdités des clowns activistes), pour court-circuiter l'escalade vers la violence physique. La tactique est dite « rose » en opposition aux couleurs des uniformes militaires.", sepieces: ["5"] },
+      { name: "Co-assignation des rôles", def: "Les rôles tenus par l'ethnographe sur son terrain ne sont pas définis par introspection, mais par co-assignation : la relation mutuelle entre le chercheur et les gens du terrain, en fonction des possibilités et des contraintes de chacun. Le terrain détermine le rôle, non pas le chercheur seul.", sepieces: ["5"] },
+      { name: "Double acculturation", def: "L'ethnographe de la BAC doit s'acculter simultanément à deux mondes : celui du clown (apprentissage corporel, vulnérabilité, présence scénique) et celui du militant activiste (non-violence, dissimulation, logistique). Cette double immersion hybride rend difficile une immersion complète au sens ethnologique.", sepieces: ["5"] },
+      { name: "Re-signification de l'espace", def: "La zone rose ne se contente pas de réinvestir un espace géographique : elle re-signifie la situation entière. Les instruments du pouvoir (boucliers, uniformes) reçoivent un sens nouveau ; l'ordre conflictuel est redéfini en terrain de jeu. Ce n'est pas seulement l'espace qui est réinvesti, mais aussi le sens de la situation.", sepieces: ["5"] },
+      { name: "Entre-deux / Espace-temps-mouvement", def: "Espaces-temps-mouvements (Le Gall & Rougé) où quelque chose se passe, se dé-normalise, se crée dans « l'ici et maintenant ». Produits par des acteurs jouant le rôle de passeurs face à des forces extérieures. Dans le terrain BAC : l'espace comparable à un « œil de cyclone » entre les deux blocs de la manifestation.", sepieces: ["5"] },
+      { name: "Court-circuit du rire (Bastide)", def: "Le rire apparaît comme la conséquence de la rencontre et du choc entre deux classes logiques qui ne devraient pas naturellement se rencontrer. Il produit un court-circuit de la pensée qui suspend l'ordre conflictuel. Mécanisme central de la zone rose.", sepieces: ["5"] }
     ]
   },
   {
     id: "pecqueux", name: "Anthony Pecqueux", dates: "1978 –", models: ["microsociologie"], sepieces: ["2"],
     concepts: [
-      { name: "Immersion interactionnelle", def: "L'immersion est un problème pratique pour les acteurs : elle est l'accomplissement d'une activité prenante dans laquelle on se plonge entièrement, en y consacrant toute son attention, avec le concours de dispositifs et médiations. Elle engage trois dimensions : problème pratique, observatoire de l'inattention, dépassement de l'opposition passivité/activité.", sepieces: ["2", "4"] },
-      { name: "Passibilité", def: "Antonyme d'impassibilité. L'expérience comme traversée dans laquelle celui à qui l'événement arrive s'expose, court des risques, met en jeu son self. Au Parlons-En, on ne fait pas que prendre la parole : le plus souvent on écoute, sans rester impassible.", sepieces: ["2", "4"] },
-      { name: "Fonctions de la membrane (spatiale et sociale)", def: "La membrane ne joue pas seulement au niveau spatial (cercle vs. entours, sas) mais aussi social : elle sélectionne quels attributs sociaux externes peuvent pénétrer l'interaction. Les apparences sensibles (odeurs, techniques du corps, ustensiles) ne cessent de rappeler les statuts, même quand la règle est de les « laisser au vestiaire ».", sepieces: ["2", "4"] },
+      { name: "Immersion interactionnelle", def: "L'immersion est un problème pratique pour les acteurs : elle est l'accomplissement d'une activité prenante dans laquelle on se plonge entièrement, en y consacrant toute son attention, avec le concours de dispositifs et médiations. Elle engage trois dimensions : problème pratique, observatoire de l'inattention, dépassement de l'opposition passivité/activité.", sepieces: ["2", "4", "5"] },
+      { name: "Passibilité", def: "Antonyme d'impassibilité. L'expérience comme traversée dans laquelle celui à qui l'événement arrive s'expose, court des risques, met en jeu son self. Au Parlons-En, on ne fait pas que prendre la parole : le plus souvent on écoute, sans rester impassible.", sepieces: ["2", "4", "5"] },
+      { name: "Fonctions de la membrane (spatiale et sociale)", def: "La membrane ne joue pas seulement au niveau spatial (cercle vs. entours, sas) mais aussi social : elle sélectionne quels attributs sociaux externes peuvent pénétrer l'interaction. Les apparences sensibles (odeurs, techniques du corps, ustensiles) ne cessent de rappeler les statuts, même quand la règle est de les « laisser au vestiaire ».", sepieces: ["2", "4", "5"] },
       { name: "Care et invisibilisation", def: "Les activités de care (servir un café, distribuer le micro, agrandir le cercle pour les nouveaux venus) sont visibles et louées avant et après l'interaction, mais invisibilisées pendant — au moment où la plupart des participants sont focalisés sur le débat.", sepieces: ["2"] }
     ]
   }
@@ -271,7 +347,8 @@ const timelineEvents = [
   { year: 2000, type: "work", title: "Y a-t-il (vraiment) des technologies de l'information ?", author: "Yves Jeanneret", authorId: "jeanneret", model: "telegraphique", desc: "Distinction fondamentale entre information mathématique et information sociale. Critique de la confusion entretenue par l'expression « technologies de l'information ».", sepieces: ["1"] },
   { year: 2013, type: "work", title: "Le jeu des apparences : piège ou profit ?", author: "Oumaya Hidri Neys", authorId: "hidri-neys", model: "microsociologie", desc: "Enquête socio. sur les hôtesses Décathlon. Capital corporel, violence symbolique, travail des apparences. Mobilise Goffman (façade, présentation de soi) et Bourdieu (professions de représentation).", sepieces: ["3"] },
   { year: 2020, type: "work", title: "L'attention et ses envers", author: "Anthony Pecqueux", authorId: "pecqueux", model: "microsociologie", desc: "Étude ethnographique de l'immersion dans un cercle de parole (le Parlons-En). Pecqueux mobilise Goffman (Fun in Games) pour analyser les mécanismes d'attention, d'inattention, de membrane et de care dans l'interaction.", sepieces: ["2"] },
-  { year: 2020, type: "work", title: "Formes d'énonciation de l'autorité dans le groupe WhatsApp Famille SANNA", author: "Sana Halizata", authorId: "sana", model: "speaking", desc: "Article appliquant le modèle SPEAKING de Hymes à un groupe WhatsApp familial transnational. Analyse des normes d'autorité gérontocratique, de la transmission culturelle intergénérationnelle et du rôle du dispositif techno-sémiotique en contexte numérique asynchrone.", sepieces: ["4"] }
+  { year: 2020, type: "work", title: "Formes d'énonciation de l'autorité dans le groupe WhatsApp Famille SANNA", author: "Sana Halizata", authorId: "sana", model: "speaking", desc: "Article appliquant le modèle SPEAKING de Hymes à un groupe WhatsApp familial transnational. Analyse des normes d'autorité gérontocratique, de la transmission culturelle intergénérationnelle et du rôle du dispositif techno-sémiotique en contexte numérique asynchrone.", sepieces: ["4"] },
+  { year: 2025, type: "work", title: "Clown d'ethnographe", author: "Romain Gressot", authorId: "gressot", model: "microsociologie", desc: "Ethnographie de la Brigade activiste des clowns (BAC) à Paris (2019-2021). Gressot analyse la tactique de la « zone rose » : investir l'espace entre manifestants et forces de l'ordre pour court-circuiter l'escalade violente par le rire. Mobilise Goffman (membrane, rôles, incidents), Hymes (SPEAKING : key, genre, instrumentalities) et de Certeau (tactique vs. stratégie).", sepieces: ["5"] }
 ];
 
 // ═══════════════════════════════════════════
@@ -282,9 +359,22 @@ function norm(str) {
 }
 
 // ═══════════════════════════════════════════
+//  UTILITY: render contextual examples
+// ═══════════════════════════════════════════
+function renderExamples(examples) {
+  if (!examples || examples.length === 0) return "";
+  const blocks = examples.map(ex => `
+    <div class="concept-example">
+      <span class="ex-label">${ex.seance ? `S${ex.seance} — ` : ""}${ex.label} :</span>${ex.text}
+    </div>
+  `).join("");
+  return `<div class="concept-examples">${blocks}</div>`;
+}
+
+// ═══════════════════════════════════════════
 //  SÉANCE LABELS & TAG HELPER
 // ═══════════════════════════════════════════
-const seanceLabels = { "1": "CM", "2": "Séance 2", "3": "Séance 3", "4": "Séance 4" };
+const seanceLabels = { "1": "CM", "2": "Séance 2", "3": "Séance 3", "4": "Séance 4", "5": "Séance 5" };
 function seanceLabel(s) { return seanceLabels[s] || `Séance ${s}`; }
 function seanceShort(s) { return s === "1" ? "CM" : `S${s}`; }
 
@@ -335,6 +425,7 @@ function openAuthorDetail(author) {
       <div class="concept-item" style="cursor:pointer" data-action="concept" data-id="${c.name}" data-author-id="${author.id}">
         <div class="name">${c.name} ${seanceTag(c.sepieces)}</div>
         <div class="def">${c.def}</div>
+        ${renderExamples(c.examples)}
       </div>
     `).join("")}
     ${authorOuvrages.length ? `
@@ -378,6 +469,7 @@ function openConceptDetail(conceptName, authorId) {
     <div style="margin-bottom:.6rem">${seanceTag(concept.sepieces || author.sepieces)}</div>
     <div class="section-label">Définition</div>
     <div style="font-size:.92rem;margin-bottom:.5rem;">${concept.def}</div>
+    ${renderExamples(concept.examples)}
     <div class="section-label">Auteur</div>
     <div><span class="tag" data-action="author" data-id="${author.id}">${author.name}</span></div>
     <div class="section-label">Modèle(s)</div>
@@ -528,7 +620,7 @@ function buildAllConcepts() {
   const all = [];
   authors.forEach(a => {
     a.concepts.forEach(c => {
-      all.push({ name: c.name, def: c.def, authorName: a.name, authorId: a.id, models: a.models, sepieces: c.sepieces || a.sepieces || [] });
+      all.push({ name: c.name, def: c.def, examples: c.examples || [], authorName: a.name, authorId: a.id, models: a.models, sepieces: c.sepieces || a.sepieces || [] });
     });
   });
   all.sort((a, b) => a.name.localeCompare(b.name, "fr"));
@@ -605,6 +697,7 @@ function renderConcepts(filter = "") {
         <div>${seanceTag(c.sepieces)}</div>
       </div>
       <div class="concept-def">${c.def}</div>
+      ${renderExamples(c.examples)}
       <div class="concept-meta">
         <span class="author-link" data-author-id="${c.authorId}">${c.authorName}</span>
         ${c.models.map(m => `<span class="model-label-tag clickable-model" data-model="${m}" style="cursor:pointer">${modelNames[m]}</span>`).join("")}
@@ -893,6 +986,18 @@ const ouvrages = [
     desc: "Analyse ethnographique d'un groupe WhatsApp familial transnational (37 membres, famille burkinabè). L'article applique le modèle SPEAKING de Hymes pour décortiquer les normes d'interaction, les rapports d'autorité gérontocratique et la transmission culturelle intergénérationnelle en contexte numérique asynchrone. Mobilise Goffman (façade, incidents & intégrations), Pecqueux (membrane) et Winkin (communication comme performance de la culture).",
     concepts: ["Espace public domestique (concession virtuelle)", "Self deception (tromperie à l'égard de soi-même)", "Autorité gérontocratique numérique", "Dispositif techno-sémiotique", "S — Setting (Cadre / Décor)", "P — Participants", "E — Ends (Finalités)", "A — Acts (Contenu & forme des messages)", "K — Key (Tonalité)", "I — Instrumentalities (Outils & supports)", "N — Norms (Normes d'interaction)", "G — Genre (Type de discours)"],
     sepieces: ["4"]
+  },
+  {
+    title: "Clown d'ethnographe. Analyse d'une tactique de la Brigade activiste des clowns, à Paris",
+    titleFr: "",
+    year: 2025,
+    author: "Romain Gressot",
+    authorId: "gressot",
+    ref: "Romain Gressot, « Clown d'ethnographe », Cahiers de littérature orale, 98, 2025. DOI : 10.4000/15cgk",
+    model: "microsociologie",
+    desc: "Ethnographie de la Brigade activiste des clowns (BAC) à Paris (2019-2021). L'article analyse la tactique de la « zone rose » : investir l'espace entre manifestants et forces de l'ordre pour court-circuiter l'escalade violente par le rire et l'absurde. Gressot montre comment les rôles (clown, ange gardien, ethnographe) sont co-assignés par le terrain, et applique Goffman (membrane, incidents, distance au rôle), Hymes (key, genre, setting, instrumentalities) et de Certeau (tactique vs. stratégie) à ce corpus inédit.",
+    concepts: ["Zone rose (pink zone)", "Co-assignation des rôles", "Double acculturation", "Re-signification de l'espace", "Entre-deux / Espace-temps-mouvement", "Court-circuit du rire", "Observation participante (4 rôles de Gold)", "Emic / Etic", "Posture réflexive de l'ethnographe"],
+    sepieces: ["5"]
   }
 ];
 
