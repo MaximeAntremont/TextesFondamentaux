@@ -164,6 +164,27 @@
   .concept-item .name { font-weight: 600; color: var(--accent-dark); font-size: .95rem; }
   .concept-item .def { font-size: .88rem; color: var(--text); margin-top: .2rem; }
 
+  /* ── Exemples contextuels dans les définitions ── */
+  .concept-examples { margin-top: .55rem; display: flex; flex-direction: column; gap: .35rem; }
+  .concept-example {
+    border-left: 3px solid var(--seance-color, #b5700a);
+    padding: .3rem .6rem .3rem .7rem;
+    background: #fdf8f0;
+    border-radius: 0 6px 6px 0;
+    font-size: .83rem;
+    font-style: italic;
+    color: #5a4a2a;
+  }
+  .concept-example .ex-label {
+    font-weight: 700;
+    font-style: normal;
+    color: #b5700a;
+    margin-right: .35rem;
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+
   /* ── Concepts view ── */
   .filter-group { margin-bottom: .8rem; }
   .filter-group-label {
